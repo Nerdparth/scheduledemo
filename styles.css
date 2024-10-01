@@ -19,7 +19,7 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
+    padding: 7px 20px;
     align-items: center;
 }
 
@@ -61,7 +61,7 @@ body {
     /* background: radial-gradient(ellipse at bottom, #0a0a0a 0%, #000000 100%); */
     background-size: cover; 
     background-image: url(images/Black\ Minimalist\ Learn\ and\ Grow\ Desktop\ Wallpaper.png);
-    padding-bottom: 220px;
+    padding-bottom: 90px;
 
 }
 
@@ -102,6 +102,7 @@ body {
     background-color: #ffffff;
     padding: 15px 30px;
     border-radius: 30px;
+    width: 220px;
     color: rgb(46, 45, 45);
     font-size: 1.2rem;
     text-decoration: none;
@@ -148,6 +149,7 @@ body {
 }
 .features-section {
     padding: 50px;
+    padding-top: 53px;
     background-image: linear-gradient(to right,rgb(0, 0, 0), rgb(22, 22, 22));
     color: white;
     font-family: 'Poppins', sans-serif;
@@ -165,6 +167,7 @@ body {
     align-items: center;
     margin-bottom: 50px;
     height: 100vh;
+    padding-bottom: 10px;
 }
 
 .rounded-corners{
@@ -240,6 +243,7 @@ body {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     border: none;
+    width: 205px;
     border-radius: 30px;
     font-size: 1rem;
     cursor: pointer;
@@ -259,4 +263,211 @@ footer {
     margin-top: 30px;
     font-size: px;
     color: grey;
+}
+
+.form-container {
+     display: none;  /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #2d2d2d;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+/* Monochromatic input styling */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #b8b8b8;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #1f1f1f;
+    color: white;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4c4c4c;
+    width: 200px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Close button styling */
+.close-button {
+    position: absolute;
+    bottom: 30px;
+    right: 25px;
+    padding: 10px;
+    background-color: #4c4c4c;
+    width: 130px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+/* pricing section  */
+
+/* Pricing Section */
+.pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 800px;
+    background-color: #222222;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 7px;
+}
+
+.tab1{
+    position: relative;
+    left: 55px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.tab2{
+    position: relative;
+    left: -75px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+header label:hover {
+    color: #a4a4a4;
+}
+
+/* Slider Styling */
+.slider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background-color: #ffffff;
+    transition: left 0.3s ease;
+}
+
+/* Checked slider logic */
+#tab-1:checked ~ header .slider {
+    left: 0;
+}
+
+#tab-2:checked ~ header .slider {
+    left: 50%;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* Card Area */
+.cards-area {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* Only show the selected row based on radio input */
+.row-1, .row-2 {
+    display: none;
+}
+
+#tab-1:checked ~ .cards-area .row-1 {
+    display: flex;
+}
+
+#tab-2:checked ~ .cards-area .row-2 {
+    display: flex;
+}
+
+.row {
+    /* background-color: #ffffff; */
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    flex-direction: column;
+    text-align: center;
+}
+
+.row:hover {
+    background-color: #202020;
+}
+
+.pricing-details span {
+    font-size: 2.5rem;
+    color: #bcbbbb;
+}
+
+.pricing-details p {
+    color: #b1afaf;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+.toppricing{
+    position: absolute;
+    left: 50%;
+    margin-top: -90px;
+    transform: translate(-50%);
+    font-size: 30px;
+    
+};
+
+    
+/* Features List */
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .price-card {
+        flex-direction: column;
+    }
+
+    .row {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
