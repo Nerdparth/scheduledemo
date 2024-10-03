@@ -1,3 +1,10 @@
-# build_files.sh
-pip install -r requirements.txt  # Install dependencies
-python3.9 manage.py collectstatic --noinput  # Collect static files
+#!/bin/bash
+
+# Install Python dependencies
+pip install -r requirements.txt
+
+# Run Django collectstatic to gather static files
+python manage.py collectstatic --noinput
+
+# Run migrations to set up or update the database
+python manage.py migrate
