@@ -8,7 +8,11 @@ def LandingPage(request):
         email = request.POST.get('email')
         phone = request.POST.get('phone')
 
-        if name and email and phone:
+        phonelength = str(phone)
+        if len(phonelength) > 10:
+            messages.error(request, "Enter a valid phone number")
+        
+        elif name and email and phone:
             messages.success(request, "Congratulations on Pre-Booking!")
             PreBooking.objects.create(name=name, email=email, phone=phone)
             return redirect("landingpage")
